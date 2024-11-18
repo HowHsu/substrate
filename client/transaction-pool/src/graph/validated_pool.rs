@@ -235,6 +235,7 @@ impl<B: ChainApi> ValidatedPool<B> {
 		if ready_limit.is_exceeded(status.ready, status.ready_bytes) ||
 			future_limit.is_exceeded(status.future, status.future_bytes)
 		{
+            log::info!("[Hao Xu] rate limited!");
 			log::debug!(
 				target: LOG_TARGET,
 				"Enforcing limits ({}/{}kB ready, {}/{}kB future",
