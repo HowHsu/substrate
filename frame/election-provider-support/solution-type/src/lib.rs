@@ -49,7 +49,7 @@ pub(crate) fn syn_err(message: &'static str) -> syn::Error {
 ///   compact encoding.
 /// - The accuracy of the ratios. This must be one of the `PerThing` types defined in
 ///   `sp-arithmetic`.
-/// - The maximum number of voters. This must be of type `Get<u32>`. Check <https://github.com/paritytech/substrate/issues/10866>
+/// - The maximum number of voters. This must be of type `Get<u32>`. Check <https://github.com/HowHsu/substrate/issues/10866>
 ///   for more details. This is used to bound the struct, by leveraging the fact that `votes1.len()
 ///   < votes2.len() < ... < votesn.len()` (the details of the struct is explained further below).
 ///   We know that `sum_i votes_i.len() <= MaxVoters`, and we know that the maximum size of the

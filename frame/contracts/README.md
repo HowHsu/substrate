@@ -99,7 +99,7 @@ Each contract is one WebAssembly module that looks like this:
 ```
 
 The documentation of all importable functions can be found
-[here](https://github.com/paritytech/substrate/blob/master/frame/contracts/src/wasm/runtime.rs).
+[here](https://github.com/HowHsu/substrate/blob/master/frame/contracts/src/wasm/runtime.rs).
 Look for the `define_env!` macro invocation.
 
 ## Usage

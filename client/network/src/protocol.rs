@@ -558,7 +558,7 @@ impl<B: BlockT> NetworkBehaviour for Protocol<B> {
 							// As a convenience, we allow opening substreams for "external"
 							// notification protocols with an empty handshake. This fetches the
 							// roles from the locally-known roles.
-							// TODO: remove this after https://github.com/paritytech/substrate/issues/5685
+							// TODO: remove this after https://github.com/HowHsu/substrate/issues/5685
 							CustomMessageOutcome::NotificationStreamOpened {
 								remote: peer_id,
 								protocol: self.notification_protocols[usize::from(set_id)].clone(),

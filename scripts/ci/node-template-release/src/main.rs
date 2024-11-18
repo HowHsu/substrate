@@ -15,7 +15,7 @@ use tar;
 use tempfile;
 use toml_edit::{self, value, Array, Item, Table};
 
-const SUBSTRATE_GIT_URL: &str = "https://github.com/paritytech/substrate.git";
+const SUBSTRATE_GIT_URL: &str = "https://github.com/HowHsu/substrate.git";
 
 type CargoToml = toml_edit::Document;
 
@@ -409,8 +409,8 @@ frame-system = { workspace = true }
 members = ["node", "pallets/template", "runtime"]
 
 [workspace.dependencies]
-frame-system = { version = "4.0.0-dev", default-features = true, git = "https://github.com/paritytech/substrate.git", rev = "commit_id" }
-sp-io = { version = "7.0.0", git = "https://github.com/paritytech/substrate.git", rev = "commit_id" }
+frame-system = { version = "4.0.0-dev", default-features = true, git = "https://github.com/HowHsu/substrate.git", rev = "commit_id" }
+sp-io = { version = "7.0.0", git = "https://github.com/HowHsu/substrate.git", rev = "commit_id" }
 
 [profile]
 

@@ -68,7 +68,7 @@ pub use sp_runtime::traits::{BadOrigin, LookupError};
 /// error declaration.
 #[macro_export]
 #[deprecated(note = "Will be removed soon; use the attribute `#[pallet]` macro instead.
-	For more info, see: <https://github.com/paritytech/substrate/pull/13705>")]
+	For more info, see: <https://github.com/HowHsu/substrate/pull/13705>")]
 macro_rules! decl_error {
 	(
 		$(#[$attr:meta])*

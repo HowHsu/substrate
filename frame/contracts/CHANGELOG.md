@@ -21,38 +21,38 @@ In other words: Upgrading this pallet will not break pre-existing contracts.
 ### Added
 
 - Forbid calling back to contracts after switching to runtime
-[#13443](https://github.com/paritytech/substrate/pull/13443)
+[#13443](https://github.com/HowHsu/substrate/pull/13443)
 
 - Allow contracts to dispatch calls into the runtime (**unstable**)
-[#9276](https://github.com/paritytech/substrate/pull/9276)
+[#9276](https://github.com/HowHsu/substrate/pull/9276)
 
 - New version of `seal_call` that offers more features.
-[#8909](https://github.com/paritytech/substrate/pull/8909)
+[#8909](https://github.com/HowHsu/substrate/pull/8909)
 
 - New `instantiate` RPC that allows clients to dry-run contract instantiation.
-[#8451](https://github.com/paritytech/substrate/pull/8451)
+[#8451](https://github.com/HowHsu/substrate/pull/8451)
 
 - New version of `seal_random` which exposes additional information.
-[#8329](https://github.com/paritytech/substrate/pull/8329)
+[#8329](https://github.com/HowHsu/substrate/pull/8329)
 
 ### Changed
 
 - Replaced storage rent with automatic storage deposits
-[#9669](https://github.com/paritytech/substrate/pull/9669)
-[#10082](https://github.com/paritytech/substrate/pull/10082)
+[#9669](https://github.com/HowHsu/substrate/pull/9669)
+[#10082](https://github.com/HowHsu/substrate/pull/10082)
 
 - Replaced `seal_println` with the `seal_debug_message` API which allows outputting debug
 messages to the console and RPC clients.
-[#8773](https://github.com/paritytech/substrate/pull/8773)
-[#9550](https://github.com/paritytech/substrate/pull/9550)
+[#8773](https://github.com/HowHsu/substrate/pull/8773)
+[#9550](https://github.com/HowHsu/substrate/pull/9550)
 
 - Make storage and fields of `Schedule` private to the crate.
-[#8359](https://github.com/paritytech/substrate/pull/8359)
+[#8359](https://github.com/HowHsu/substrate/pull/8359)
 
 ### Fixed
 
 - Remove pre-charging which caused wrongly estimated weights
-[#8976](https://github.com/paritytech/substrate/pull/8976)
+[#8976](https://github.com/HowHsu/substrate/pull/8976)
 
 ## [v3.0.0] 2021-02-25
 
@@ -61,56 +61,56 @@ This version constitutes the first release that brings any stability guarantees 
 ### Added
 
 - Emit an event when a contract terminates (self-destructs).
-[#8014](https://github.com/paritytech/substrate/pull/8014)
+[#8014](https://github.com/HowHsu/substrate/pull/8014)
 
 - Charge rent for code stored on the chain in addition to the already existing
 rent that is paid for data storage.
-[#7935](https://github.com/paritytech/substrate/pull/7935)
+[#7935](https://github.com/HowHsu/substrate/pull/7935)
 
 - Allow the runtime to configure per storage item costs in addition
 to the already existing per byte costs.
-[#7819](https://github.com/paritytech/substrate/pull/7819)
+[#7819](https://github.com/HowHsu/substrate/pull/7819)
 
 - Contracts are now deleted lazily so that the user who removes a contract
 does not need to pay for the deletion of the contract storage.
-[#7740](https://github.com/paritytech/substrate/pull/7740)
+[#7740](https://github.com/HowHsu/substrate/pull/7740)
 
 - Allow runtime authors to define chain extensions in order to provide custom
 functionality to contracts.
-[#7548](https://github.com/paritytech/substrate/pull/7548)
-[#8003](https://github.com/paritytech/substrate/pull/8003)
+[#7548](https://github.com/HowHsu/substrate/pull/7548)
+[#8003](https://github.com/HowHsu/substrate/pull/8003)
 
 - Proper weights which are fully automated by benchmarking.
-[#6715](https://github.com/paritytech/substrate/pull/6715)
-[#7017](https://github.com/paritytech/substrate/pull/7017)
-[#7361](https://github.com/paritytech/substrate/pull/7361)
+[#6715](https://github.com/HowHsu/substrate/pull/6715)
+[#7017](https://github.com/HowHsu/substrate/pull/7017)
+[#7361](https://github.com/HowHsu/substrate/pull/7361)
 
 ### Changed
 
 - Collect the rent for one block during instantiation.
-[#7847](https://github.com/paritytech/substrate/pull/7847)
+[#7847](https://github.com/HowHsu/substrate/pull/7847)
 
 - Instantiation takes a `salt` argument to allow for easier instantion of the
 same code by the same sender.
-[#7482](https://github.com/paritytech/substrate/pull/7482)
+[#7482](https://github.com/HowHsu/substrate/pull/7482)
 
 - Improve the information returned by the `contracts_call` RPC.
-[#7468](https://github.com/paritytech/substrate/pull/7468)
+[#7468](https://github.com/HowHsu/substrate/pull/7468)
 
 - Simplify the node configuration necessary to add this module.
-[#7409](https://github.com/paritytech/substrate/pull/7409)
+[#7409](https://github.com/HowHsu/substrate/pull/7409)
 
 ### Fixed
 
 - Consider the code size of a contract in the weight that is charged for
 loading a contract from storage.
-[#8086](https://github.com/paritytech/substrate/pull/8086)
+[#8086](https://github.com/HowHsu/substrate/pull/8086)
 
 - Fix possible overflow in storage size calculation
-[#7885](https://github.com/paritytech/substrate/pull/7885)
+[#7885](https://github.com/HowHsu/substrate/pull/7885)
 
 - Cap the surcharge reward that can be claimed.
-[#7870](https://github.com/paritytech/substrate/pull/7870)
+[#7870](https://github.com/HowHsu/substrate/pull/7870)
 
 - Fix a possible DoS vector where contracts could allocate too large buffers.
-[#7818](https://github.com/paritytech/substrate/pull/7818)
+[#7818](https://github.com/HowHsu/substrate/pull/7818)

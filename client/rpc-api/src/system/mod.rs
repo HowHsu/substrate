@@ -78,8 +78,8 @@ pub trait SystemApi<Hash, Number> {
 	///
 	/// **Warning**: This API is not stable. Please do not programmatically interpret its output,
 	/// as its format might change at any time.
-	// TODO: the future of this call is uncertain: https://github.com/paritytech/substrate/issues/1890
-	// https://github.com/paritytech/substrate/issues/5541
+	// TODO: the future of this call is uncertain: https://github.com/HowHsu/substrate/issues/1890
+	// https://github.com/HowHsu/substrate/issues/5541
 	#[method(name = "system_unstable_networkState")]
 	async fn system_network_state(&self) -> RpcResult<JsonValue>;
 

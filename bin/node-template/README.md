@@ -3,10 +3,10 @@
 A fresh [Substrate](https://substrate.io/) node, ready for hacking :rocket:
 
 A standalone version of this template is available for each release of Polkadot in the [Substrate Developer Hub Parachain Template](https://github.com/substrate-developer-hub/substrate-parachain-template/) repository.
-The parachain template is generated directly at each Polkadot release branch from the [Node Template in Substrate](https://github.com/paritytech/substrate/tree/master/bin/node-template) upstream
+The parachain template is generated directly at each Polkadot release branch from the [Node Template in Substrate](https://github.com/HowHsu/substrate/tree/master/bin/node-template) upstream
 
 It is usually best to use the stand-alone version to start a new project.
-All bugs, suggestions, and feature requests should be made upstream in the [Substrate](https://github.com/paritytech/substrate/tree/master/bin/node-template) repository.
+All bugs, suggestions, and feature requests should be made upstream in the [Substrate](https://github.com/HowHsu/substrate/tree/master/bin/node-template) repository.
 
 ## Getting Started
 
@@ -137,7 +137,7 @@ Review the [FRAME runtime implementation](./runtime/src/lib.rs) included in this
 
 ### Pallets
 
-The runtime in this project is constructed using many FRAME pallets that ship with the [core Substrate repository](https://github.com/paritytech/substrate/tree/master/frame) and a template pallet that is [defined in the `pallets`](./pallets/template/src/lib.rs) directory.
+The runtime in this project is constructed using many FRAME pallets that ship with the [core Substrate repository](https://github.com/HowHsu/substrate/tree/master/frame) and a template pallet that is [defined in the `pallets`](./pallets/template/src/lib.rs) directory.
 
 A FRAME pallet is compromised of a number of blockchain primitives:
 
@@ -160,4 +160,4 @@ To get all the correct dependencies, activate direnv `direnv allow`.
 
 ### Docker
 
-Please follow the [Substrate Docker instructions here](https://github.com/paritytech/substrate/blob/master/docker/README.md) to build the Docker container with the Substrate Node Template binary.
+Please follow the [Substrate Docker instructions here](https://github.com/HowHsu/substrate/blob/master/docker/README.md) to build the Docker container with the Substrate Node Template binary.

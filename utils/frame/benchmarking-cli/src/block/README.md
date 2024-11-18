@@ -111,7 +111,7 @@ License: Apache-2.0
 <!-- LINKS -->
 
 [Polkachu]: https://polkachu.com/snapshots
-[here]: https://github.com/paritytech/substrate/issues/11141
+[here]: https://github.com/HowHsu/substrate/issues/11141
 [polkadot#5192]: https://github.com/paritytech/polkadot/issues/5192
 
 [`--db`]: ../shared/README.md#arguments

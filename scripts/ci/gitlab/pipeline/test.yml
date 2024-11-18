@@ -123,7 +123,7 @@ cargo-check-benches:
 node-bench-regression-guard:
   # it's not belong to `build` semantically, but dag jobs can't depend on each other
   # within the single stage - https://gitlab.com/gitlab-org/gitlab/-/issues/30632
-  # more: https://github.com/paritytech/substrate/pull/8519#discussion_r608012402
+  # more: https://github.com/HowHsu/substrate/pull/8519#discussion_r608012402
   stage: build
   extends:
     - .docker-env
@@ -282,7 +282,7 @@ test-linux-stable-extra:
   script:
     - rusty-cachier snapshot create
     # Run node-cli tests
-    # TODO: add to test-linux-stable-nextest after fix https://github.com/paritytech/substrate/issues/11321
+    # TODO: add to test-linux-stable-nextest after fix https://github.com/HowHsu/substrate/issues/11321
     - time cargo test node-cli --workspace --locked --release --verbose --features runtime-benchmarks --manifest-path ./bin/node/cli/Cargo.toml
     # Run doctests
     # TODO: add to test-linux-stable-nextest after fix https://github.com/nextest-rs/nextest/issues/16
@@ -349,7 +349,7 @@ test-linux-stable-int:
     - rusty-cachier cache upload
 
 # more information about this job can be found here:
-# https://github.com/paritytech/substrate/pull/6916
+# https://github.com/HowHsu/substrate/pull/6916
 check-tracing:
   stage: test
   # this is an artificial job dependency, for pipeline optimization using GitLab's DAGs
@@ -368,7 +368,7 @@ check-tracing:
     - rusty-cachier cache upload
 
 # more information about this job can be found here:
-# https://github.com/paritytech/substrate/pull/3778
+# https://github.com/HowHsu/substrate/pull/3778
 test-full-crypto-feature:
   stage: test
   # this is an artificial job dependency, for pipeline optimization using GitLab's DAGs

@@ -349,7 +349,7 @@ impl Peerset {
 	/// Produces a JSON object containing the state of the peerset manager, for debugging purposes.
 	pub fn debug_info(&mut self) -> serde_json::Value {
 		// TODO: Check what info we can include here.
-		//       Issue reference: https://github.com/paritytech/substrate/issues/14160.
+		//       Issue reference: https://github.com/HowHsu/substrate/issues/14160.
 		json!("unimplemented")
 	}
 

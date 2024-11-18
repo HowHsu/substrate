@@ -2,7 +2,7 @@
 
 There is [a script in place](../.maintain/rustdocs-release.sh) to manage the deployment of Substrate rustdocs at
 https://paritytech.github.io/substrate, which is pushing the rustdocs file in `gh-pages` branch of
-https://github.com/paritytech/substrate.
+https://github.com/HowHsu/substrate.
 
 The documentation at the top of the `rustdocs-release.sh` explains most of the mechanics of the script.
 

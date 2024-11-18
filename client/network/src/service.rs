@@ -382,7 +382,7 @@ where
 				.substream_upgrade_protocol_override(upgrade::Version::V1Lazy)
 				.notify_handler_buffer_size(NonZeroUsize::new(32).expect("32 != 0; qed"))
 				// NOTE: 24 is somewhat arbitrary and should be tuned in the future if necessary.
-				// See <https://github.com/paritytech/substrate/pull/6080>
+				// See <https://github.com/HowHsu/substrate/pull/6080>
 				.per_connection_event_buffer_size(24)
 				.max_negotiating_inbound_streams(2048);
 
@@ -1470,11 +1470,11 @@ where
 				// reopened.
 				// The code below doesn't compile because `role` is unknown. Propagating the
 				// handshake of the secondary connections is quite an invasive change and
-				// would conflict with https://github.com/paritytech/substrate/issues/6403.
+				// would conflict with https://github.com/HowHsu/substrate/issues/6403.
 				// Considering that dropping notifications is generally regarded as
 				// acceptable, this bug is at the moment intentionally left there and is
 				// intended to be fixed at the same time as
-				// https://github.com/paritytech/substrate/issues/6403.
+				// https://github.com/HowHsu/substrate/issues/6403.
 				// self.event_streams.send(Event::NotificationStreamClosed {
 				// remote,
 				// protocol,

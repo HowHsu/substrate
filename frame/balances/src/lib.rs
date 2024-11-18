@@ -254,7 +254,7 @@ pub mod pallet {
 
 		/// The ID type for reserves.
 		///
-		/// Use of reserves is deprecated in favour of holds. See `https://github.com/paritytech/substrate/pull/12951/`
+		/// Use of reserves is deprecated in favour of holds. See `https://github.com/HowHsu/substrate/pull/12951/`
 		type ReserveIdentifier: Parameter + Member + MaxEncodedLen + Ord + Copy;
 
 		/// The ID type for holds.
@@ -1051,7 +1051,7 @@ pub mod pallet {
 				Locks::<T, I>::remove(who);
 				if existed {
 					// TODO: use Locks::<T, I>::hashed_key
-					// https://github.com/paritytech/substrate/issues/4969
+					// https://github.com/HowHsu/substrate/issues/4969
 					system::Pallet::<T>::dec_consumers(who);
 				}
 			} else {

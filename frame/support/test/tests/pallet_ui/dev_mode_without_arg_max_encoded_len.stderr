@@ -3,8 +3,8 @@ error: use of deprecated constant `pallet::warnings::ImplicitCallIndex_0::_w`:
                Please instead ensure that all calls have a `pallet::call_index` attribute or put the pallet into `dev` mode.
 
                For more info see:
-                   <https://github.com/paritytech/substrate/pull/12891>
-                   <https://github.com/paritytech/substrate/pull/11381>
+                   <https://github.com/HowHsu/substrate/pull/12891>
+                   <https://github.com/HowHsu/substrate/pull/11381>
   --> tests/pallet_ui/dev_mode_without_arg_max_encoded_len.rs:25:10
    |
 25 |         pub fn my_call(_origin: OriginFor<T>) -> DispatchResult {
@@ -17,7 +17,7 @@ error: use of deprecated constant `pallet::warnings::ConstantWeight_0::_w`:
                Please instead benchmark all calls or put the pallet into `dev` mode.
 
                For more info see:
-                   <https://github.com/paritytech/substrate/pull/13798>
+                   <https://github.com/HowHsu/substrate/pull/13798>
   --> tests/pallet_ui/dev_mode_without_arg_max_encoded_len.rs:24:20
    |
 24 |         #[pallet::weight(0)]

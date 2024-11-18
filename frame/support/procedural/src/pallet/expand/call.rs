@@ -70,8 +70,8 @@ pub fn expand_call(def: &mut Def) -> proc_macro2::TokenStream {
 			.old("use implicit call indices")
 			.new("ensure that all calls have a `pallet::call_index` attribute or put the pallet into `dev` mode")
 			.help_links(&[
-				"https://github.com/paritytech/substrate/pull/12891",
-				"https://github.com/paritytech/substrate/pull/11381"
+				"https://github.com/HowHsu/substrate/pull/12891",
+				"https://github.com/HowHsu/substrate/pull/11381"
 			])
 			.span(method.name.span())
 			.build();
@@ -88,7 +88,7 @@ pub fn expand_call(def: &mut Def) -> proc_macro2::TokenStream {
 					.index(weight_warnings.len())
 					.old("use hard-coded constant as call weight")
 					.new("benchmark all calls or put the pallet into `dev` mode")
-					.help_link("https://github.com/paritytech/substrate/pull/13798")
+					.help_link("https://github.com/HowHsu/substrate/pull/13798")
 					.span(lit.span())
 					.build();
 				weight_warnings.push(warning);

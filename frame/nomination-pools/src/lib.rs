@@ -339,7 +339,7 @@
 //!
 //! To be fair to joiners, this implementation also need joining pools, which are actively staking,
 //! in addition to the unbonding pools. For maintenance simplicity these are not implemented.
-//! Related: <https://github.com/paritytech/substrate/issues/10860>
+//! Related: <https://github.com/HowHsu/substrate/issues/10860>
 //!
 //! **Relevant methods:**
 //!

@@ -40,7 +40,7 @@ fn unavailable_yet<R: Default>(name: &str) -> R {
 	tracing::error!(
 		target: super::LOG_TARGET,
 		"The {:?} API is not available for offchain workers yet. Follow \
-		https://github.com/paritytech/substrate/issues/1458 for details",
+		https://github.com/HowHsu/substrate/issues/1458 for details",
 		name
 	);
 	Default::default()

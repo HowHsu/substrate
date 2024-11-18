@@ -193,7 +193,7 @@ pub mod v2 {
 	}
 
 	/// Migrate the pool reward scheme to the new version, as per
-	/// <https://github.com/paritytech/substrate/pull/11669.>.
+	/// <https://github.com/HowHsu/substrate/pull/11669.>.
 	pub struct MigrateToV2<T>(sp_std::marker::PhantomData<T>);
 	impl<T: Config> MigrateToV2<T> {
 		fn run(current: StorageVersion) -> Weight {
@@ -499,12 +499,12 @@ pub mod v4 {
 	/// # Warning
 	///
 	/// To avoid mangled storage please use `MigrateV3ToV5` instead.
-	/// See: github.com/paritytech/substrate/pull/13715
+	/// See: github.com/HowHsu/substrate/pull/13715
 	///
 	/// This migration adds a `commission` field to every `BondedPoolInner`, if
 	/// any.
 	#[deprecated(
-		note = "To avoid mangled storage please use `MigrateV3ToV5` instead. See: github.com/paritytech/substrate/pull/13715"
+		note = "To avoid mangled storage please use `MigrateV3ToV5` instead. See: github.com/HowHsu/substrate/pull/13715"
 	)]
 	pub struct MigrateToV4<T, U>(sp_std::marker::PhantomData<(T, U)>);
 	#[allow(deprecated)]
@@ -521,7 +521,7 @@ pub mod v4 {
 			);
 
 			if onchain == 3 {
-				log!(warn, "Please run MigrateToV5 immediately after this migration. See github.com/paritytech/substrate/pull/13715");
+				log!(warn, "Please run MigrateToV5 immediately after this migration. See github.com/HowHsu/substrate/pull/13715");
 				let initial_global_max_commission = U::get();
 				GlobalMaxCommission::<T>::set(Some(initial_global_max_commission));
 				log!(

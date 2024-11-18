@@ -40,7 +40,7 @@ pub fn expand_store_trait(def: &mut Def) -> proc_macro2::TokenStream {
 	let warning: syn::ItemStruct = syn::parse_quote!(
 		#[deprecated(note = r"
 		Use of `#[pallet::generate_store(pub(super) trait Store)]` will be removed soon.
-		Check https://github.com/paritytech/substrate/pull/13535 for more details.")]
+		Check https://github.com/HowHsu/substrate/pull/13535 for more details.")]
 		struct #warnig_struct_name;
 	);
 

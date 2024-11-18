@@ -1506,7 +1506,7 @@ fn respects_block_rules() {
 #[test]
 #[cfg(disable_flaky)]
 #[allow(dead_code)]
-// FIXME: https://github.com/paritytech/substrate/issues/11321
+// FIXME: https://github.com/HowHsu/substrate/issues/11321
 fn returns_status_for_pruned_blocks() {
 	use sc_consensus::BlockStatus;
 	sp_tracing::try_init_simple();

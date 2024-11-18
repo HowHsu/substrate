@@ -93,7 +93,7 @@
 //!
 //! ### Example from the FRAME
 //!
-//! The [Session pallet](https://github.com/paritytech/substrate/blob/master/frame/session/src/lib.rs) uses
+//! The [Session pallet](https://github.com/HowHsu/substrate/blob/master/frame/session/src/lib.rs) uses
 //! the Timestamp pallet for session management.
 //!
 //! ## Related Pallets

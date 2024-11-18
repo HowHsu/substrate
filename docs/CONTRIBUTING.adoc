@@ -23,7 +23,7 @@ There are a few basic ground-rules for contributors (including the maintainer(s)
 
 A Pull Request (PR) needs to be reviewed and approved by project maintainers unless:
 
-- it does not alter any logic (e.g. comments, dependencies, docs), then it may be tagged https://github.com/paritytech/substrate/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+label%3AA2-insubstantial[`insubstantial`] and merged by its author once CI is complete.
+- it does not alter any logic (e.g. comments, dependencies, docs), then it may be tagged https://github.com/HowHsu/substrate/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+label%3AA2-insubstantial[`insubstantial`] and merged by its author once CI is complete.
 - it is an urgent fix with no large change to logic, then it may be merged after a non-author contributor has approved the review once CI is complete.
 
 *Labels TLDR:*
@@ -37,17 +37,17 @@ A Pull Request (PR) needs to be reviewed and approved by project maintainers unl
 
 . Please tag each PR with exactly one `A`, `B`, `C` and `D` label at the minimum.
 . When tagging a PR, it should be done while keeping all downstream users in mind. Downstream users are not just Polkadot or system parachains, but also all the other parachains and solo chains that are using Substrate. The labels are used by downstream users to track changes and to include these changes properly into their own releases.
-. Once a PR is ready for review please add the https://github.com/paritytech/substrate/pulls?q=is%3Apr+is%3Aopen+label%3AA0-please_review+[`A0-please_review`] label. Generally PRs should sit with this label for 48 hours in order to garner feedback. It may be merged before if all relevant parties had a look at it.
-. If the first review is not an approval, swap `A0-please_review` to any label `[A3, A5]` to indicate that the PR has received some feedback, but needs further work. For example. https://github.com/paritytech/substrate/labels/A3-in_progress[`A3-in_progress`] is a general indicator that the PR is work in progress.
+. Once a PR is ready for review please add the https://github.com/HowHsu/substrate/pulls?q=is%3Apr+is%3Aopen+label%3AA0-please_review+[`A0-please_review`] label. Generally PRs should sit with this label for 48 hours in order to garner feedback. It may be merged before if all relevant parties had a look at it.
+. If the first review is not an approval, swap `A0-please_review` to any label `[A3, A5]` to indicate that the PR has received some feedback, but needs further work. For example. https://github.com/HowHsu/substrate/labels/A3-in_progress[`A3-in_progress`] is a general indicator that the PR is work in progress.
 . PRs must be tagged with `B*` labels to signal if a change is note worthy for downstream users. The respective `T*` labels should be added to signal the component that was changed. `B0-silent` must only be used for changes that don't require any attention by downstream users.
 . PRs must be tagged with their release importance via the `C1-C7` labels. The release importance is only informing about how important it is to apply a release that contains the change.
 . PRs must be tagged with their audit requirements via the `D1-D9` labels.
-. PRs that introduce runtime migrations must be tagged with https://github.com/paritytech/substrate/labels/E0-runtime_migration[`E0-runtime_migration`]. See the https://github.com/paritytech/substrate/blob/master/utils/frame/try-runtime/cli/src/lib.rs#L18[Migration Best Practices here] for more info about how to test runtime migrations.
-. PRs that introduce irreversible database migrations must be tagged with https://github.com/paritytech/substrate/labels/E1-database_migration[`E1-database_migration`].
-. PRs that add host functions must be tagged with with https://github.com/paritytech/substrate/labels/E3-host_functions[`E3-host_functions`].
-. PRs that break the external API must be tagged with https://github.com/paritytech/substrate/labels/F3-breaks_API[`F3-breaks_API`].
-. PRs that change the mechanism for block authoring in a backwards-incompatible way must be tagged with https://github.com/paritytech/substrate/labels/F1-breaks_authoring[`F1-breaks_authoring`].
-. PRs that "break everything" must be tagged with https://github.com/paritytech/substrate/labels/F0-breaks_everything[`F0-breaks_everything`].
+. PRs that introduce runtime migrations must be tagged with https://github.com/HowHsu/substrate/labels/E0-runtime_migration[`E0-runtime_migration`]. See the https://github.com/HowHsu/substrate/blob/master/utils/frame/try-runtime/cli/src/lib.rs#L18[Migration Best Practices here] for more info about how to test runtime migrations.
+. PRs that introduce irreversible database migrations must be tagged with https://github.com/HowHsu/substrate/labels/E1-database_migration[`E1-database_migration`].
+. PRs that add host functions must be tagged with with https://github.com/HowHsu/substrate/labels/E3-host_functions[`E3-host_functions`].
+. PRs that break the external API must be tagged with https://github.com/HowHsu/substrate/labels/F3-breaks_API[`F3-breaks_API`].
+. PRs that change the mechanism for block authoring in a backwards-incompatible way must be tagged with https://github.com/HowHsu/substrate/labels/F1-breaks_authoring[`F1-breaks_authoring`].
+. PRs that "break everything" must be tagged with https://github.com/HowHsu/substrate/labels/F0-breaks_everything[`F0-breaks_everything`].
 . PRs should be categorized into projects.
 . No PR should be merged until all reviews' comments are addressed and CI is successful.
 
@@ -95,13 +95,13 @@ To create a Polkadot companion PR:
     Note: The merge-bot currently doesn't work with forks on org accounts, only individual accounts.
 	(Hint: it's recommended to use `bot merge` to merge all substrate PRs, not just ones with a polkadot companion.)
 
-If your PR is reviewed well, but a Polkadot PR is missing, signal it with https://github.com/paritytech/substrate/labels/E6-needs_polkadot_pr[`E6-needs_polkadot_pr`] to prevent it from getting automatically merged. In most cases the CI will add this label automatically.
+If your PR is reviewed well, but a Polkadot PR is missing, signal it with https://github.com/HowHsu/substrate/labels/E6-needs_polkadot_pr[`E6-needs_polkadot_pr`] to prevent it from getting automatically merged. In most cases the CI will add this label automatically.
 
 As there might be multiple pending PRs that might conflict with one another, a) you should not merge the substrate PR until the Polkadot PR has also been reviewed and b) both should be merged pretty quickly after another to not block others.
 
 == Helping out
 
-We use https://paritytech.github.io/labels/doc_substrate.html[labels] to manage PRs and issues and communicate state of a PR. Please familiarize yourself with them. Best way to get started is to a pick a ticket tagged https://github.com/paritytech/substrate/issues?q=is%3Aissue+is%3Aopen+label%3AZ1-easy[`easy`] or https://github.com/paritytech/substrate/issues?q=is%3Aissue+is%3Aopen+label%3AZ2-medium[`medium`] and get going or https://github.com/paritytech/substrate/issues?q=is%3Aissue+is%3Aopen+label%3AZ6-mentor[`mentor`] and get in contact with the mentor offering their support on that larger task.
+We use https://paritytech.github.io/labels/doc_substrate.html[labels] to manage PRs and issues and communicate state of a PR. Please familiarize yourself with them. Best way to get started is to a pick a ticket tagged https://github.com/HowHsu/substrate/issues?q=is%3Aissue+is%3Aopen+label%3AZ1-easy[`easy`] or https://github.com/HowHsu/substrate/issues?q=is%3Aissue+is%3Aopen+label%3AZ2-medium[`medium`] and get going or https://github.com/HowHsu/substrate/issues?q=is%3Aissue+is%3Aopen+label%3AZ6-mentor[`mentor`] and get in contact with the mentor offering their support on that larger task.
 
 == Issues
 Please label issues with the following labels:

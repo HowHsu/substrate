@@ -1,7 +1,7 @@
 # Substrate Node Template Release Process
 
 1. This release process has to be run in a github checkout Substrate directory with your work
-committed into `https://github.com/paritytech/substrate/`, because the build script will check
+committed into `https://github.com/HowHsu/substrate/`, because the build script will check
 the existence of your current git commit ID in the remote repository.
 
 	Assume you are in root directory of Substrate. Run:
@@ -31,7 +31,7 @@ by running the following command.
 linked to a certain git commit in Substrate remote repository, such as:
 
 	```toml
-	sp-core = { version = "7.0.0", git = "https://github.com/paritytech/substrate.git", rev = "de80d0107336a9c7a2efdc0199015e4d67fcbdb5", default-features = false }
+	sp-core = { version = "7.0.0", git = "https://github.com/HowHsu/substrate.git", rev = "de80d0107336a9c7a2efdc0199015e4d67fcbdb5", default-features = false }
 	```
 
 	We will update each of them to link to the Rust	[crate registry](https://crates.io/).

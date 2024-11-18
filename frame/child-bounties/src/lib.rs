@@ -46,7 +46,7 @@
 
 // Most of the business logic in this pallet has been
 // originally contributed by "https://github.com/shamb0",
-// as part of the PR - https://github.com/paritytech/substrate/pull/7965.
+// as part of the PR - https://github.com/HowHsu/substrate/pull/7965.
 // The code has been moved here and then refactored in order to
 // extract child bounties as a separate pallet.
 

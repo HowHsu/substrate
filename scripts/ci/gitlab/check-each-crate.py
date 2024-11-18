@@ -3,7 +3,7 @@
 # A script that checks each workspace crate individually.
 # It's relevant to check workspace crates individually because otherwise their compilation problems
 # due to feature misconfigurations won't be caught, as exemplified by
-# https://github.com/paritytech/substrate/issues/12705
+# https://github.com/HowHsu/substrate/issues/12705
 #
 # `check-each-crate.py target_group groups_total`
 #

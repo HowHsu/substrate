@@ -133,7 +133,7 @@ Minimizing this is important to have a large transaction throughput.
 License: Apache-2.0
 
 <!-- LINKS -->
-[`ExtrinsicBaseWeight`]: https://github.com/paritytech/substrate/blob/580ebae17fa30082604f1c9720f6f4a1cfe95b50/frame/support/src/weights/extrinsic_weights.rs#L26
-[`BlockExecutionWeight`]: https://github.com/paritytech/substrate/blob/580ebae17fa30082604f1c9720f6f4a1cfe95b50/frame/support/src/weights/block_weights.rs#L26
+[`ExtrinsicBaseWeight`]: https://github.com/HowHsu/substrate/blob/580ebae17fa30082604f1c9720f6f4a1cfe95b50/frame/support/src/weights/extrinsic_weights.rs#L26
+[`BlockExecutionWeight`]: https://github.com/HowHsu/substrate/blob/580ebae17fa30082604f1c9720f6f4a1cfe95b50/frame/support/src/weights/block_weights.rs#L26
 
-[System::Remark]: https://github.com/paritytech/substrate/blob/580ebae17fa30082604f1c9720f6f4a1cfe95b50/frame/system/src/lib.rs#L382
+[System::Remark]: https://github.com/HowHsu/substrate/blob/580ebae17fa30082604f1c9720f6f4a1cfe95b50/frame/system/src/lib.rs#L382

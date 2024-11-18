@@ -216,9 +216,9 @@ fn continous_slashes_below_offending_threshold() {
 /// remain after the validator re-set the intention to be validating again.
 ///
 /// This behaviour is due to removing implicit chill upon slash
-/// <https://github.com/paritytech/substrate/pull/12420>.
+/// <https://github.com/HowHsu/substrate/pull/12420>.
 ///
-/// Related to <https://github.com/paritytech/substrate/issues/13714>.
+/// Related to <https://github.com/HowHsu/substrate/issues/13714>.
 fn set_validation_intention_after_chilled() {
 	use frame_election_provider_support::SortedListProvider;
 	use pallet_staking::{Event, Forcing, Nominators};

@@ -21,7 +21,7 @@
 # - Machine benchmarking
 #
 # Should be run on a reference machine to gain accurate benchmarks
-# current reference machine: https://github.com/paritytech/substrate/pull/5848
+# current reference machine: https://github.com/HowHsu/substrate/pull/5848
 
 while getopts 'bfp:v' flag; do
   case "${flag}" in

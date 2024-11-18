@@ -208,7 +208,7 @@ pub mod v4 {
 	/// This migration cleans up empty agendas of the V4 scheduler.
 	///
 	/// This should be run on a scheduler that does not have
-	/// <https://github.com/paritytech/substrate/pull/12989> since it piles up `None`-only agendas. This does not modify the pallet version.
+	/// <https://github.com/HowHsu/substrate/pull/12989> since it piles up `None`-only agendas. This does not modify the pallet version.
 	pub struct CleanupAgendas<T>(sp_std::marker::PhantomData<T>);
 
 	impl<T: Config> OnRuntimeUpgrade for CleanupAgendas<T> {
