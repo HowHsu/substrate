@@ -17,6 +17,7 @@
 // along with this program. If not, see <https://www.gnu.org/licenses/>.
 
 use std::{collections::HashMap, sync::Arc, time::Duration};
+use std::time::{SystemTime, UNIX_EPOCH};
 
 use crate::LOG_TARGET;
 use futures::{channel::mpsc::Receiver, Future};
@@ -185,6 +186,9 @@ impl<B: ChainApi> Pool<B> {
 		xt: ExtrinsicFor<B>,
 	) -> Result<ExtrinsicHash<B>, B::Error> {
 		let res = self.submit_at(at, source, std::iter::once(xt)).await?.pop();
+        let now = SystemTime::now();
+        let timestamp = now.duration_since(UNIX_EPOCH).unwrap().as_secs();
+        log::info!("[Hao Xu] import tx: time: {}, {:?}", timestamp, res);
 		res.expect("One extrinsic passed; one result returned; qed")
 	}
 
