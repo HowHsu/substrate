@@ -403,7 +403,7 @@ where
 		let block_size_limit = block_size_limit.unwrap_or(self.default_block_size_limit);
 
 		debug!("Attempting to push transactions from the pool.");
-		debug!("Pool status: {:?}", self.transaction_pool.status());
+		info!("[Hao Xu] beofre proposal: Pool status: {:?}", self.transaction_pool.status());
 		let mut transaction_pushed = false;
 
         info!("[Hao Xu] block_size_limit: {}", block_size_limit);
@@ -411,6 +411,7 @@ where
 			let pending_tx = if let Some(pending_tx) = pending_iterator.next() {
 				pending_tx
 			} else {
+                info!("[Hao Xu] no more txs");
 				break EndProposingReason::NoMoreTransactions
 			};
 
@@ -492,6 +493,8 @@ where
 
 		self.transaction_pool.remove_invalid(&unqueue_invalid);
 
+		info!("[Hao Xu] after proposal: Pool status: {:?}", self.transaction_pool.status());
+        let block_final_size = block_builder.estimate_block_size(self.include_proof_in_block_size_estimation);
 		let (block, storage_changes, proof) = block_builder.build()?.into_inner();
 
 		self.metrics.report(|metrics| {
@@ -501,6 +504,7 @@ where
 			metrics.report_end_proposing_reason(end_reason);
 		});
 
+        info!("block size: {}", block_final_size);
 		info!(
 			"🎁 Prepared block for proposing at {} ({} ms) [hash: {:?}; parent_hash: {}; extrinsics ({}): [{}]]",
 			block.header().number(),
