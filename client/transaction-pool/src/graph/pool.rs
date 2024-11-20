@@ -188,7 +188,7 @@ impl<B: ChainApi> Pool<B> {
 		let res = self.submit_at(at, source, std::iter::once(xt)).await?.pop();
         let now = SystemTime::now();
         let timestamp = now.duration_since(UNIX_EPOCH).unwrap().as_secs();
-        log::info!("[Hao Xu] import tx: time: {}, {:?}", timestamp, res);
+        //log::info!("[Hao Xu] import tx: time: {}, {:?}", timestamp, res);
 		res.expect("One extrinsic passed; one result returned; qed")
 	}
 
