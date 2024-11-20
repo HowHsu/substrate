@@ -406,6 +406,7 @@ where
 		debug!("Pool status: {:?}", self.transaction_pool.status());
 		let mut transaction_pushed = false;
 
+        info!("[Hao Xu] block_size_limit: {}", block_size_limit);
 		let end_reason = loop {
 			let pending_tx = if let Some(pending_tx) = pending_iterator.next() {
 				pending_tx
@@ -415,8 +416,8 @@ where
 
 			let now = (self.now)();
 			if now > deadline {
-				debug!(
-					"Consensus deadline reached when pushing block transactions, \
+				info!(
+					"[Hao Xu] Consensus deadline reached when pushing block transactions, \
 					proceeding with proposing."
 				);
 				break EndProposingReason::HitDeadline
@@ -431,21 +432,21 @@ where
 				pending_iterator.report_invalid(&pending_tx);
 				if skipped < MAX_SKIPPED_TRANSACTIONS {
 					skipped += 1;
-					debug!(
-						"Transaction would overflow the block size limit, \
+					info!(
+						"[Hao Xu] Transaction would overflow the block size limit, \
 						 but will try {} more transactions before quitting.",
 						MAX_SKIPPED_TRANSACTIONS - skipped,
 					);
 					continue
 				} else if now < soft_deadline {
-					debug!(
-						"Transaction would overflow the block size limit, \
+					info!(
+						"[Hao Xu] Transaction would overflow the block size limit, \
 						 but we still have time before the soft deadline, so \
 						 we will try a bit more."
 					);
 					continue
 				} else {
-					debug!("Reached block size limit, proceeding with proposing.");
+					info!("[Hao Xu] Reached block size limit, proceeding with proposing.");
 					break EndProposingReason::HitBlockSizeLimit
 				}
 			}
@@ -460,17 +461,17 @@ where
 					pending_iterator.report_invalid(&pending_tx);
 					if skipped < MAX_SKIPPED_TRANSACTIONS {
 						skipped += 1;
-						debug!(
-							"Block seems full, but will try {} more transactions before quitting.",
+						info!(
+							"[Hao Xu 2] Block seems full, but will try {} more transactions before quitting.",
 							MAX_SKIPPED_TRANSACTIONS - skipped,
 						);
 					} else if (self.now)() < soft_deadline {
-						debug!(
-							"Block seems full, but we still have time before the soft deadline, \
+                        info!(
+							"[Hao Xu 2] Block seems full, but we still have time before the soft deadline, \
 							 so we will try a bit more before quitting."
 						);
 					} else {
-						debug!("Reached block weight limit, proceeding with proposing.");
+						info!("[Hao Xu 2] Reached block weight limit, proceeding with proposing.");
 						break EndProposingReason::HitBlockWeightLimit
 					}
 				},
